@@ -22,7 +22,6 @@ for week in week_set:
                 text_dict[week][abbr_set_complete[i]] = json.load(f)
         else:
             text_dict[week][abbr_set_complete[i]] = {}
-        print(text_dict[week][abbr_set_complete[i]])
 from torch.utils.data import Dataset
 import random
 

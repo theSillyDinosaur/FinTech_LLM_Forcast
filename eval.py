@@ -39,8 +39,9 @@ def calculate_clip_score(actuals, predictions, model, processor, device):
         for actual_set, pred_set in zip(actuals, predictions):
             actual_set = actual_set.split('End of prediction')[0].split('/')
             pred_set = pred_set.split('End of prediction')[0].split('/')
+            best_score = 0
             for pred in pred_set:
-                best_score = 0
+                score = 0
                 for actual in actual_set:
                     # Process text inputs
                     inputs = processor(text=[actual, pred], return_tensors="pt", padding=True, truncation=True).to(device)
@@ -53,10 +54,10 @@ def calculate_clip_score(actuals, predictions, model, processor, device):
 
                     # Calculate cosine similarity (CLIP score)
                     # The score is the dot product of the normalized embeddings
-                    score = torch.dot(text_features_norm[0], text_features_norm[1]).item()
+                    score = max(score, torch.dot(text_features_norm[0], text_features_norm[1]).item())
                     best_score = max(best_score, score)
-                    clip_scores.append(score)
-                clip_best_scores.append(best_score)
+                clip_scores.append(score)
+            clip_best_scores.append(best_score)
 
     return clip_scores, clip_best_scores
 
