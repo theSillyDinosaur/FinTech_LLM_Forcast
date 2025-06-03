@@ -1,0 +1,27 @@
+{
+    "0752857003": [
+        "White boots with black soles and laces, featuring a chunky heel and sturdy construction.",
+        "White, black laces, rubber sole.",
+        "Protect feet, support ankle."
+    ],
+    "0752857001": [
+        "Chic, edgy boots with chunky soles, black leather upper, lace-up front, round toe.",
+        "Black, smooth leather with silver-toned metal eyelets and laces.",
+        "Sturdy, protective boot for work or outdoor activities."
+    ],
+    "0704630004": [
+        "Black, lace-up shoes with brand logo.",
+        "Black leather, white sole.",
+        "Protect feet, support arches."
+    ],
+    "0786524001": [
+        "Error: Generation failed: CUDA error: unknown error\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n",
+        "",
+        ""
+    ],
+    "0782061001": [
+        "Error: Generation failed: CUDA error: unknown error\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n",
+        "",
+        ""
+    ]
+}
