@@ -18,7 +18,7 @@ bnb_config = BitsAndBytesConfig(
     bnb_4bit_use_double_quant=True,
     bnb_4bit_quant_type="nf4"
 )
-model = AutoModelForCausalLM.from_pretrained("/content/drive/MyDrive/vicuna-bestseller-lora-1abbr/checkpoint-1065", quantization_config=bnb_config)
+model = AutoModelForCausalLM.from_pretrained("./Vicuna_7b-v1.5", quantization_config=bnb_config)
 model.eval() # Set the model to evaluation mode
 
 # Load CLIP model and processor
